@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="storage_view_tree" model="ir.ui.view">
+            <field name="name">storage_view_tree</field>
+            <field name="model">storage</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="img" widget = "image" options="{'size': [130, 130]}"/>
+                    <field name="category"/>
+                    <field name="product" />
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="storage_view_form" model="ir.ui.view">
+            <field name="name">storage_view_form</field>
+            <field name="model">storage</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="img" widget="image" options="{'size': [130, 130]}"/>
+                                <field name="category" widget="radio" options="{'horizontal': true}"/>
+                                <field name="product"/>
+                                <field name="date"/>
+                                <field name="price"/>
+                            </group>
+                            <group>                                
+                                <field name="inventory_num"/>                                
+                                <field name="amount"/>
+                                <field name="lastofprice"/>
+                                <button name="action_taken" type="object" string="Nhập" class="oe_highlight"/>
+                                <button name="action_consum" type="object" string="Tiêu thụ" class="oe_highlight"/>
+                                <button name="action_reset" type="object" string="Cài Lại" class="oe_highlight"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="storage_action" model="ir.actions.act_window">
+            <field name="name">storage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">storage</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="storage_child_menu" parent="demo_1.menu_root_menu" 
+                  action="demo_1.storage_action" name="Kho" sequence="4"/>
+    </data>
+</odoo>

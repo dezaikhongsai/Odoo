@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_menu_user,access_menu_user,model_menu,group_tag_user,1,0,0,0
+access_menu_seller,access_menu_seller,model_menu,group_tag_seller,1,1,1,1
+access_menu_manager,access_menu_manager,model_menu,group_tag_manager,1,1,1,1
+access_storage_user,access_storage_user,model_storage,group_tag_user,0,0,0,0
+access_storage_seller,access_storage_seler,model_storage,group_tag_seller,1,0,0,0
+access_storage_manager,access_storage_manager,model_storage,group_tag_manager,1,1,1,1
+access_tag_user,access_tag_user,model_tag,group_tag_user,1,1,1,1
+access_tag_seller,access_tag_seller,model_tag,group_tag_seller,1,1,1,1
+access_tag_manager,access_tag_manager,model_tag,group_tag_manager,1,1,1,1
+access_order_user,access_order_user,model_order,group_tag_user,1,1,1,1
+access_order_seller,access_order_seller,model_order,group_tag_seller,1,1,1,1
+access_order_manager,access_order_manager,model_order,group_tag_manager,1,1,1,1
